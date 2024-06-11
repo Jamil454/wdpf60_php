@@ -10,7 +10,8 @@ var_dump($x);// var_dump()for describing a variable
 echo"<br>";
 echo"<hr>";
  print_r($z);//print_r() for describing array
+ echo"<hr>";
 
-
+echo gettype($x);
 
 ?>
