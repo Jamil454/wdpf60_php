@@ -14,8 +14,7 @@ if(isset($_POST['submit'])){
 $temp= $_FILES['photo']['tmp_name'];
 $filename= $_FILES['photo']['name']; 
 $filedata = pathinfo($filename);
-   //show file extension(jpg,png,jpeg...etc)
-$file_ext = strtolower($filedata['extension']);
+$file_ext = strtolower($filedata['extension']); //show file extension(jpg,png,jpeg...etc)
 $allowed_ext=["jpg","png","jpeg"];
 $filesize= $_FILES['photo']['size'];
 $allowedsize =307200;
@@ -30,7 +29,7 @@ if(!in_array($file_ext,$allowed_ext)){
     $errors[] = "Allowed file types jpg, png, jpeg";
 
 }
-if(  count($errors)>0){
+if(count($errors)>0){
     foreach( $errors as $err ){
         echo $err . "<br>";
 
