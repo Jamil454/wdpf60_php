@@ -10,14 +10,12 @@
 <?php 
         if(isset($_POST["submit"])){
             $stid = $_POST["stid"];
-            $st = new Student("result.txt");
+            $st = new student("result.txt");
             $st->result($stid);
 
         }
-        class Student {
-            // public $id;
-            // public $name;
-            // public $score;
+        class student {
+           
             public $datas;
     
             public function __construct($x){
@@ -25,16 +23,14 @@
             }
     
             public function result($stid){
-                foreach($this-> datas as $data){
-                    $line = explode("|", $data);
+                foreach($this-> datas as $jamila){
+                    $line = explode("|", $jamila);
                     list($id,$name,$score,$result) = $line;
                     if($id == $stid){
-                        echo "Id: $id  <br>  Name:$name  <br> Score:$score <br> Result: $result";
+                        echo "Id: $id  <br>  Name: $name  <br> Score: $score <br> Result: $result";
                     }
-        
                 }
             }
-    
         }
     ?>
 
