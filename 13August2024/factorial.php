@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .right{
+            color: green;
+        }
+    </style>
 </head>
 <body>
     <?php
@@ -17,7 +22,7 @@ if(isset($_POST['submit'])) {
     for( $i = $num; $i>=1; $i--){
         $fact = $fact * $i;
     }
-    return "The factorial of " . $num . " is " . $fact;
+    return "<b class = right>The factorial of " . $num . " is  $fact </b>";
     }
 
 ?>

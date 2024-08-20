@@ -23,7 +23,7 @@ if(isset($_POST['submit'])) {
         for ( $x = 2; $x < $num; $x++) {
             if ($num % $x == 0) { return $num. " is not a prime number";}
         }
-        return $num . " is  a prime number" ;
+        return $num . "is  a prime number" ;
     }
 }
 

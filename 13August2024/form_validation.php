@@ -53,7 +53,7 @@
 }
 }
     ?>
-    <fieldset >
+    <fieldset style="width: fit-content;">
     <form action="" method="post">
         <input type="text" name="fullname" placeholder="Enter your name"> <br>
         Gender: <br>
