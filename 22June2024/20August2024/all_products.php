@@ -38,8 +38,7 @@
         <td> <?php echo $row ['product_details']?> </td>
         <td> <?php echo $row ['product_price']?> </td>
         <td> <?php echo $row ['product_quantity']?> </td>
-        <td> <a onclick=" return confirm('Are you sure to delete')" href="product_delete.php?id=
-        <?php echo $row ['id']?>"> <img src="bin.jpg" alt= "" width= "15"> </a> </td>
+        <td> <a onclick=" return confirm('Are you sure to delete')" href="product_delete.php?id=<?php echo $row ['id']?>"> <img src="bin.jpg" alt= "" width= "15"> </a> </td>
     </tr>
   
  <?php }

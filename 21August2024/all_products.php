@@ -18,8 +18,9 @@
     <h3> Product List</h3>
 
     <?php 
-  $sql = "SELECT * FROM Product";
-  $data = $db-> query($sql); ?>
+//   $sql = "SELECT * FROM product";
+    $sql= "SELECT *FROM product , catagoris WHERE catagoris.cat_id  = product.product_catagory";
+    $data = $db-> query($sql); ?>
     <table>
         <tr>
             <th>ID</th>
@@ -27,7 +28,9 @@
             <th>Details</th>
             <th>Price</th>
             <th>Quantity</th>
+            <th>Catagory</th>
             <th>Action</th>
+           
         </tr>
     <?php 
   while($row = $data ->fetch_assoc()){ ?>
@@ -38,8 +41,9 @@
         <td> <?php echo $row ['product_details']?> </td>
         <td> <?php echo $row ['product_price']?> </td>
         <td> <?php echo $row ['product_quantity']?> </td>
-        <td> <a onclick=" return confirm('Are you sure to delete')" href="product_delete.php?id=
-        <?php echo $row ['id']?>"> <img src="bin.jpg" alt= "" width= "15"> </a> </td>
+        <td> <?php echo $row ['name']?> </td>
+        <td> <a onclick=" return confirm('Are you sure to delete')" href="product_delete.php?id=<?php echo $row ['id']?>"> <img src="bin.jpg" alt= "" width= "15"> </a> | 
+        <a href="product_edit.php?id=<?php echo $row ['id']?>"> <img src="pencil.jpeg" alt= "" width= "15"> </a></td>
     </tr>
   
  <?php }
