@@ -1,4 +1,4 @@
-<?php $db = new mysqli("localhost:3310", "root", "", "evidence");?>
+<?php $db = new mysqli("localhost:3308", "root", "", "evidence");?>
 
 <!DOCTYPE html>
 <html lang="en">

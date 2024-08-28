@@ -1,6 +1,6 @@
 <?php
 
-    define("HOST", "localhost:3310");
+    define("HOST", "localhost:3308");
     define("USR", "root");
     define("PASS", "");
     define("DATABASE", "evidence");
