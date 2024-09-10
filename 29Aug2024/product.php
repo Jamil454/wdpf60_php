@@ -20,10 +20,7 @@
 
     <?php 
     $sql = $conn->query("SELECT * FROM product_above_5000");
-    
-
-
-    ?>
+        ?>
     <table>
         <tr>
             <th>ID</th>
@@ -38,8 +35,7 @@
                 <td><?php echo $row['price']?></td>
                 <td><?php echo $row['manufacturer_id']?></td>
          </tr>
-
-            <?php }?>
+     <?php }?>
     </table>
 </body>
 </html>
